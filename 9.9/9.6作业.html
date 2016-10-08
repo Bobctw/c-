@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+function qiuhe(n)
+{
+	if(n<0)
+		return n+"<0";
+	else 
+	{
+		var s=0;
+		var arr=[];
+		for(var i=0;i<=n;i++)
+		{
+			s+=i;
+		}
+		for(var j=0;j<=n;j++)
+		{
+			arr.push(j);
+		}
+	    arr=arr.join("+");
+		return arr+"="+s;
+    }
+}
+</script>
+</body>
+</html>

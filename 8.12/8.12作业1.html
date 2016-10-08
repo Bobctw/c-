@@ -1,0 +1,22 @@
+<html>
+<script>
+<body>
+function max(a,b)
+{
+	var M=a[0].length;
+	for(i=1;i<a.length-1;i++)
+	{
+		if(a[i].length>M)
+			M=a[i].length;
+	}
+	var S=M-b[0].length;
+	for(i=0;i<b.length-1;i++)
+	{
+		if(M-b[i].length>S)
+			S=M-b[i].length;
+	}
+	return S;
+}
+</body>
+</script>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<body>
+<script>
+function Stack()  
+{
+    this.arr = [];
+    this.push = function (x)
+    {
+        this.arr.push(x);
+    }
+    this.pop = function()
+    {
+        return this.arr.pop();
+    }
+    this.peek = function ()
+    {
+        return this.arr[this.arr.length-1];
+    }
+    this.length = function (){return this.arr.length;};
+}
+function evalfront(exp)
+{
+    var s=new Stack();
+    exp=exp.split(' ');
+    for(var i in exp)
+    {
+        if(exp[i]==")")
+        {
+            var arr1=[];
+            do
+			{    
+                var a=s.pop();
+                arr1.push(a);                
+            }while(a!="(");
+            console.log(arr1);
+            s.push(eval4z(arr1));        
+        }
+        else
+            s.push(exp[i])
+    }
+    var b=s.peek();
+    return alert(b);
+}
+
+function eval4z(exparr)
+{
+    var a = Number(exparr[0]);
+    var b = Number(exparr[1]);
+    switch(exparr[2])
+    {
+        case "+":
+            return b+a;
+        case "-":
+            return b-a;
+        case "*":
+            return b*a;
+        case "/":
+            return b/a;
+    }
+}
+</script>
+</body>
+</html>

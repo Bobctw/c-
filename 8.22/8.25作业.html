@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+function Capital(w)
+{
+	w.split('');
+	var s=[];
+	for(var i=0;i<w.length;i++)
+	{
+		if(daxie(w[i])!=-1)
+			s+=i;
+	}
+	return s;
+}
+function daxie(x)
+{
+	var y=["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+	for(var x=0;x<y.length;x++)
+	{
+		if(y.indexOf(x)<0)
+			return -1;
+	}
+}
+
+</script>
+</body>
+</html>

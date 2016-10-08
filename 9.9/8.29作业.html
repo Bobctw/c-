@@ -1,0 +1,35 @@
+<html>
+<body>
+<script>
+Array.prototype.square = function ()
+                         {
+                             return this.map(function (x){return x*x;});
+                         };
+Array.prototype.cube = function ()
+                       {
+						   return this.map(function (x){return x*x*x;});
+					   };
+Array.prototype.sum = function ()
+                      {
+					      return this.reduce(function (x,y)
+						                     {
+											     x.push(x+y);
+												 return x;
+											 });
+					  };	
+Array.prototype.sum = function ()
+                      {
+					      return this.map(function(x)
+                                          {
+										      var i=0;
+											  var s=0;
+											  for(i in x)
+											  {
+												  s+=x[i];
+											  }
+										  }						  
+					  }			  
+						 
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<script>
+<body>
+function x(a,b)
+{
+	var m=[];
+	for(i=0;i<b.length-1;i++)
+	{
+		if(b[i].length>b[i+1].length)
+			m.push(b[i]);
+	}
+}
+</body>
+</script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<script>
+<body>
+function occupyarr(a,b)
+{
+	for(i in b)
+	{
+		var arr=[]; 
+		arr.push(occupy(a,b[i]));
+	}
+	return arr;
+}
+
+function occupy(a,b)
+{
+	var s=0;
+	for(i in a)
+	{
+		if(b==a[i])
+			s+=1;
+	}
+	return s;
+}
+
+
+</body>
+</script>
+</html>

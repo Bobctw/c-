@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function maxthan(n)
+{
+    return function (m)
+    {
+		for(i in m)
+		{
+			if(n<m[i])
+				return m.filter(function(x){return x>n;});
+		}
+    }
+}
+//≤‚ ‘£∫
+var f = maxthan(5);
+f([1,2,3,5,8,13]);//[8,13]
+
+</script>
+</head>
+<body>
+</body>
+</html>

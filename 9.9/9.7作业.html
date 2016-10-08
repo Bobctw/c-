@@ -1,0 +1,19 @@
+<html>
+<body>
+<script>
+function arr(x,y)
+{
+	var s=x+"";
+	var num=0;
+	for(var i=0;i<s.length;i++)
+	{
+			num+=Math.pow(s[i],y+i);
+	}
+	if(num%x==0)
+		return num/x;
+	else
+		return -1;		
+}
+</script>
+</body>
+</html>

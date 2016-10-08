@@ -1,0 +1,42 @@
+<html>
+<body>
+<script>
+function arr(x,y)
+{
+	if(y<x.length)
+		return x.slice(0,y);
+	else	
+		var a=0;
+		var s=[];
+		for(var j=0;j<y-x.length;j++)
+		{
+			for(var i=0;i<x.length;i++)
+			{
+				a+=x[i];
+			}
+			s.push(a);
+		}
+		return x.concat(s);
+}
+
+function xibo(arr,n)
+{
+	var l=arr.length;
+	var s=arr.concat([]);
+	if(n<=1)
+		return arr.slice(0,n)	
+	while(s.length!=n)
+	{
+		var next=last(s,l)
+		s.push(next);
+	}
+	return s;
+}
+function last(arr1,n1)
+{
+	var arr2=arr1.concat([]);
+	return arr2.reverse().slice(0,n1).reduce(function (x,y){return x+y});
+}
+</script>
+</body>
+</html>

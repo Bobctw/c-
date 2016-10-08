@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+function counterEffect(x)
+{
+	var arr=[];
+	var h=[];
+	var s=[];
+	var j=0;
+	
+	for(var i=0;i<x.length;i++)
+	{
+		if(x[i]==0)
+			arr.push([0]);
+			
+		if(x[i]>0)
+		{
+			for(j=0;j<=x[i];j++)
+			{
+				s.push(j);
+			}
+			h=h.concat(s);
+		}
+		
+	}
+	return arr;
+}
+</script>
+</body>
+</html>

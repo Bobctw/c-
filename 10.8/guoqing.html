@@ -1,0 +1,122 @@
+<html>
+<body>
+<script>
+//作业1 杨慧三角
+function yh(n)
+{
+    var s = [1];
+    for(var i = 1;i<n;i++)
+	{
+	    var arr1=[0].concat(s);
+		var arr2=s.concat([0]);
+		a=[];
+        for(var j = 0;j<arr1.length;j++)
+		{
+		    a.push(arr1[j]+arr2[j])
+		}
+	}    	
+	return a;
+}
+//作业2 删除相同元素
+function sc(arr)
+{
+    var s = [];
+	for(var i in arr)
+	{
+	    if(s.indexOf(arr[i])==-1)
+		    s.push(arr[i]);
+	}
+    return s;
+}
+//作业3 合并排序数组
+function hb(arr1,arr2)
+{
+    var s = [];
+	var a = arr1.concat([]);
+	var b = arr2.concat([]);
+	while(!(a.length==0||b.length==0))
+	{
+	    var x = a[0];
+		var y = b[0];
+		if(x>y)
+		{
+		    s.push(y);
+			b.splice(0,1);
+		}
+		else
+		{
+		    s.push(x);
+			a.splice(0,1);
+		}
+	}
+	if(a.length==0)
+	{
+		s=s.concat(b);
+	}
+	else
+	{
+		s=s.concat(a);
+	}
+	
+	return s;
+}
+//作业4 两个字符串是否符合某种规律
+function gl(arr,brr)
+{
+    var obj = {};
+	for(var i = 0;i<arr.length;i++)
+	{
+	    if(obj[arr[i]]==undefined)
+		    obj[arr[i]] = brr[i];
+		else
+		{
+		    if(obj[arr[i]]==brr[i])
+			    continue;
+			else
+                return false;			
+		}
+	}
+    return true;
+} 
+作业5 DNA链
+function DNA(arr)
+{
+    var dna = {A:"T",T:"A",C:"G",G:"C"};
+	var s = [];
+	for(var i = 0;i<arr.length;i++)
+	{
+	    s+=dna[arr[i]];
+	}
+    return s;
+}
+//作业6 找出字符串中元音的个数  a e i o u  
+function yy(str)
+{
+    var s = {a:0,e:0,i:0,o:0,u:0};
+	for(var i = 0;i<str.length;i++)
+	{
+	    if(s[str[i]]!=undefined)
+		    s[str[i]]+=1;
+	}
+    return s;
+}
+作业7 
+function f7(arr)
+{
+   var yu = {a:0,e:0,i:0,o:0,u:0};
+   var s = arr.split("");
+   for(var i = 0;i<arr.length;i++)
+   {
+       if(yu[s[i]]==undefined)
+	   {
+	       var m = s[i];
+		   s.splice(i,1);
+		   s = s.join("")+"-"+ m + "ay";
+		   break;
+	   }
+   }    
+   return s;	
+}
+</script>
+</body>
+</html>
